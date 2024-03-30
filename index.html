@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Page</title>
+    <style>
+        #main-product-img{
+            width:400px;
+            height:400px;
+            object-fit:cover;
+            border:1px;
+            border-radius: 20px;
+            box-shadow: 0px opx 10px 0px rgba(0,0,0,0.25);
+            display: block;
+            margin:20px auto;
+
+        }
+        .product-img-container{
+            display: flex;
+            justify-content: center;
+        }
+        .product-img{
+            height: 150px;
+            width:80px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin:10px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="shoes1.png" id="main-product-img"/>
+
+    <div class="product-img-container">
+        <img src="shoes1.png" class="product-img" onclick="changeImage(1)"/>
+        <img src="shoes2.png" class="product-img" onclick="changeImage(2)"/>
+        <img src="shoes3.png" class="product-img" onclick="changeImage(3)"/>
+        <img src="shoes4.png" class="product-img" onclick="changeImage(4)"/>
+        <img src="shoes5.png" class="product-img" onclick="changeImage(5)"/>
+     </div>
+
+     <script>
+        function changeImage(num){
+            const mainImage=document.getElementById('main-product-img')
+
+            if(num==1){
+                mainImage.src="shoes1.png";
+            }else if(num==2){
+                mainImage.src="shoes2.png";
+            }else if(num==3){
+                mainImage.src="shoes3.png";
+            }else if(num==4){
+                mainImage.src="shoes4.png";
+            }else if(num==5){
+                mainImage.src="shoes5.png";
+            }
+
+
+
+
+        }
+     </script>
+</body>
+</html>
